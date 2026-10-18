@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My first web</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header>
         <h1>My first web</h1>
         <nav>
-            <ul>
+            <ul class="nav-list">
                 <li><a href="index.html">首页</a></li>
                 <li><a href="projects.html">项目</a></li>
                 <li><a href="contact.html">联系</a></li>
@@ -20,6 +21,23 @@
     <main>
         <h1>联系我</h1>
         <p>如果你想联系我，请发送电子邮件到 <a href="mailto:lfu45757@gmail.com">lfu45757@gmail.com</a></p>
+
+        <form>
+            <!-- 后续输入字段在这-->
+             <dir>
+                <label for="name">姓名</label>
+                <input id="name" name="name" type="text" required>
+             </dir>
+             <dir>
+                <label for="email">电子邮件</label>
+                <input id="email" name="email" type="email" required>
+             </dir>
+             <dir>
+                <label for="message">留言</label>
+                <textarea id="message" name="message" required></textarea>
+             </dir>
+            <button type="submit">提交留言</button>
+        </form>
     </main>
 
     <footer>

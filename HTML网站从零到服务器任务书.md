@@ -54,9 +54,9 @@ my-html-site/
 
 任务：
 
-- [ ] 安装 VS Code、Git、Chrome 或 Edge。
-- [ ] 安装 VS Code 扩展：Live Server、Prettier（可选）。
-- [ ] 准备 GitHub 账号。
+- [x] 安装 VS Code、Git、Chrome 或 Edge。
+- [x] 安装 VS Code 扩展：Live Server、Prettier（可选）。
+- [x] 准备 GitHub 账号。
 - [ ] 准备一台 Ubuntu 22.04/24.04 云服务器；安全组只开放 `22`、`80`、`443`。
 - [ ] 如使用域名，准备一个域名并能修改 DNS。
 
@@ -74,12 +74,12 @@ ssh -V
 
 任务：
 
-- [ ] 创建上述目录结构。
-- [ ] 在每个页面写入 `<!doctype html>`、`<html lang="zh-CN">`、`<head>`、UTF-8 编码、viewport、标题和 `<body>`。
-- [ ] 在 `index.html` 使用 `header`、`nav`、`main`、`section`、`footer`。
-- [ ] 添加 `h1`，并保持每页只有一个主要 `h1`。
-- [ ] 使用相对路径连接三个页面。
-- [ ] 用 Live Server 打开页面，并使用浏览器开发者工具检查 DOM。
+- [x] 创建上述目录结构。
+- [x] 在每个页面写入 `<!doctype html>`、`<html lang="zh-CN">`、`<head>`、UTF-8 编码、viewport、标题和 `<body>`。
+- [x] 在 `index.html` 使用 `header`、`nav`、`main`、`section`、`footer`。
+- [x] 添加 `h1`，并保持每页只有一个主要 `h1`。
+- [x] 使用相对路径连接三个页面。
+- [x] 用 Live Server 打开页面，并使用浏览器开发者工具检查 DOM。
 
 本地启动（不依赖扩展的备选方法）：
 
@@ -95,12 +95,12 @@ python -m http.server 8080
 
 任务：
 
-- [ ] 首页包含简介、技能列表、项目预览和行动按钮。
-- [ ] 项目页至少有 3 个 `article` 项目卡片，每个包含标题、描述、图片和链接。
-- [ ] 联系页包含 `form`、`label`、姓名、邮箱、主题和留言字段；使用 `required`、`type="email"` 等原生校验。
-- [ ] 每张内容图片都有准确的 `alt`；纯装饰图片用空 `alt=""`。
-- [ ] 外链新窗口打开时添加 `rel="noopener noreferrer"`。
-- [ ] 添加 `404.html`，提供返回首页的链接。
+- [x] 首页包含简介、技能列表、项目预览和行动按钮。
+- [x] 项目页至少有 3 个 `article` 项目卡片，每个包含标题、描述、图片和链接。
+- [x] 联系页包含 `form`、`label`、姓名、邮箱、主题和留言字段；使用 `required`、`type="email"` 等原生校验。
+- [x] 每张内容图片都有准确的 `alt`；纯装饰图片用空 `alt=""`。
+- [x] 外链新窗口打开时添加 `rel="noopener noreferrer"`。
+- [x] 添加 `404.html`，提供返回首页的链接。
 
 验收标准：关闭 CSS 后，页面内容顺序依然合理；键盘 Tab 能依次访问所有链接和表单控件；表单空提交会触发浏览器校验。
 
@@ -108,9 +108,9 @@ python -m http.server 8080
 
 任务：
 
-- [ ] 在所有页面引入同一个 `style.css`。
-- [ ] 定义颜色、间距、字体和最大内容宽度的 CSS 变量。
-- [ ] 使用 Flexbox 或 Grid 完成导航与卡片布局。
+- [x] 在所有页面引入同一个 `style.css`。
+- [x] 定义颜色、间距、字体和最大内容宽度的 CSS 变量。
+- [x] 使用 Flexbox 或 Grid 完成导航与卡片布局。
 - [ ] 设置图片 `max-width: 100%; height: auto;`。
 - [ ] 至少设置一个移动端断点，推荐 `768px`。
 - [ ] 为链接、按钮和输入框添加清晰的 `:focus-visible` 状态。
@@ -165,7 +165,7 @@ sudo apt update
 sudo apt install -y nginx git
 ```
 
-2. 拉取站点到临时目录，再发布到 Web 根目录：
+1. 拉取站点到临时目录，再发布到 Web 根目录：
 
 ```bash
 git clone <repo-url> ~/my-html-site
@@ -176,7 +176,7 @@ sudo find /var/www/my-html-site -type d -exec chmod 755 {} \;
 sudo find /var/www/my-html-site -type f -exec chmod 644 {} \;
 ```
 
-3. 创建 `/etc/nginx/sites-available/my-html-site`：
+1. 创建 `/etc/nginx/sites-available/my-html-site`：
 
 ```nginx
 server {
@@ -197,7 +197,7 @@ server {
 
 如果暂时没有域名，把 `server_name` 改为 `_`，先用公网 IP 验证。
 
-4. 启用站点并验证：
+1. 启用站点并验证：
 
 ```bash
 sudo ln -s /etc/nginx/sites-available/my-html-site /etc/nginx/sites-enabled/my-html-site
@@ -258,15 +258,15 @@ sudo systemctl reload nginx
 
 ## 5. 每日执行建议
 
-| 天数 | 重点 | 当日可交付物 |
-|---|---|---|
-| Day 1 | 环境、目录、HTML 骨架 | 三个可导航的裸 HTML 页面 |
-| Day 2 | 内容、语义、图片、表单 | 内容完整且无 CSS 也可读 |
-| Day 3 | CSS 与响应式 | 手机和桌面均可用 |
-| Day 4 | JavaScript、无障碍、Lighthouse | 交互完成，质量报告达标 |
-| Day 5 | Git、GitHub、README | 可复现的公开或私有仓库 |
-| Day 6 | Ubuntu、Nginx、首次发布 | 公网 IP 可访问 |
-| Day 7 | 域名、HTTPS、回滚、验收 | 正式线上地址与部署记录 |
+| 天数    | 重点                        | 当日可交付物          |
+| ----- | ------------------------- | --------------- |
+| Day 1 | 环境、目录、HTML 骨架             | 三个可导航的裸 HTML 页面 |
+| Day 2 | 内容、语义、图片、表单               | 内容完整且无 CSS 也可读  |
+| Day 3 | CSS 与响应式                  | 手机和桌面均可用        |
+| Day 4 | JavaScript、无障碍、Lighthouse | 交互完成，质量报告达标     |
+| Day 5 | Git、GitHub、README         | 可复现的公开或私有仓库     |
+| Day 6 | Ubuntu、Nginx、首次发布         | 公网 IP 可访问       |
+| Day 7 | 域名、HTTPS、回滚、验收            | 正式线上地址与部署记录     |
 
 ## 6. 完成定义（Definition of Done）
 
@@ -287,4 +287,3 @@ sudo systemctl reload nginx
 - 添加 Open Graph、favicon、`robots.txt` 和 `sitemap.xml`。
 - 对图片使用 WebP/AVIF，并设置 `width`、`height` 降低布局偏移。
 - 为部署前版本创建 Git 标签，如 `v1.0.0`。
-
