@@ -1,0 +1,102 @@
+{
+  "checkedAt": "2026-10-25T17:33:02.453Z",
+  "results": [
+    {
+      "page": "index.html",
+      "width": 360,
+      "status": "passed",
+      "horizontalOverflow": false,
+      "menu": "keyboard, click, Escape passed"
+    },
+    {
+      "page": "projects.html",
+      "width": 360,
+      "status": "passed",
+      "horizontalOverflow": false,
+      "menu": "keyboard, click, Escape passed"
+    },
+    {
+      "page": "contact.html",
+      "width": 360,
+      "status": "passed",
+      "horizontalOverflow": false,
+      "menu": "keyboard, click, Escape passed"
+    },
+    {
+      "page": "404.html",
+      "width": 360,
+      "status": "passed",
+      "horizontalOverflow": false,
+      "menu": "keyboard, click, Escape passed"
+    },
+    {
+      "page": "index.html",
+      "width": 768,
+      "status": "passed",
+      "horizontalOverflow": false,
+      "menu": "keyboard, click, Escape passed"
+    },
+    {
+      "page": "projects.html",
+      "width": 768,
+      "status": "passed",
+      "horizontalOverflow": false,
+      "menu": "keyboard, click, Escape passed"
+    },
+    {
+      "page": "contact.html",
+      "width": 768,
+      "status": "passed",
+      "horizontalOverflow": false,
+      "menu": "keyboard, click, Escape passed"
+    },
+    {
+      "page": "404.html",
+      "width": 768,
+      "status": "passed",
+      "horizontalOverflow": false,
+      "menu": "keyboard, click, Escape passed"
+    },
+    {
+      "page": "index.html",
+      "width": 1440,
+      "status": "passed",
+      "horizontalOverflow": false,
+      "menu": "desktop visible"
+    },
+    {
+      "page": "projects.html",
+      "width": 1440,
+      "status": "passed",
+      "horizontalOverflow": false,
+      "menu": "desktop visible"
+    },
+    {
+      "page": "contact.html",
+      "width": 1440,
+      "status": "passed",
+      "horizontalOverflow": false,
+      "menu": "desktop visible"
+    },
+    {
+      "page": "404.html",
+      "width": 1440,
+      "status": "passed",
+      "horizontalOverflow": false,
+      "menu": "desktop visible"
+    },
+    {
+      "test": "native form validation and truthful demo status",
+      "status": "passed"
+    },
+    {
+      "test": "768/769 breakpoint and focus preservation",
+      "status": "passed"
+    },
+    {
+      "test": "navigation available without JavaScript on all pages",
+      "status": "passed"
+    }
+  ],
+  "errors": []
+}

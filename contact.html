@@ -3,45 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My first web</title>
+    <title>联系我 | My first web</title>
+    <meta name="description" content="通过电子邮件联系 XiaoWu_5，或体验带浏览器原生校验的静态联系表单。">
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <script src="assets/js/main.js" defer></script>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header>
-        <h1>My first web</h1>
-        <nav>
-            <ul class="nav-list">
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="site-brand" href="index.html">My first web</a>
+        <nav aria-label="主要导航">
+          <button class="nav-toggle" type="button" data-nav-toggle aria-controls="primary-navigation" aria-expanded="false" hidden>展开导航</button>
+          <ul class="nav-list" id="primary-navigation">
                 <li><a href="index.html">首页</a></li>
                 <li><a href="projects.html">项目</a></li>
-                <li><a href="contact.html">联系</a></li>
-            </ul>
+                <li><a href="contact.html" aria-current="page">联系</a></li>
+          </ul>
         </nav>
+      </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <h1>联系我</h1>
         <p>如果你想联系我，请发送电子邮件到 <a href="mailto:lfu45757@gmail.com">lfu45757@gmail.com</a></p>
 
-        <form>
+        <p class="form-note" id="form-note">这是静态演示表单，不会发送邮件。实际联系请使用上方邮箱；标注“必填”的项目均需填写。</p>
+        <form data-demo-form aria-describedby="form-note">
             <!-- 后续输入字段在这-->
-             <dir>
-                <label for="name">姓名</label>
-                <input id="name" name="name" type="text" required>
-             </dir>
-             <dir>
-                <label for="email">电子邮件</label>
-                <input id="email" name="email" type="email" required>
-             </dir>
-             <dir>
-                <label for="message">留言</label>
+             <div class="form-field">
+                <label for="name">姓名（必填）</label>
+                <input id="name" name="name" type="text" autocomplete="name" required>
+             </div>
+             <div class="form-field">
+                <label for="email">电子邮件（必填）</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+             </div>
+             <div class="form-field">
+                <label for="subject">主题（必填）</label>
+                <input id="subject" name="subject" type="text" required>
+             </div>
+             <div class="form-field">
+                <label for="message">留言（必填）</label>
                 <textarea id="message" name="message" required></textarea>
-             </dir>
+             </div>
             <button type="submit">提交留言</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
         </form>
     </main>
 
     <footer>
-        <p>版权所有 &copy; 2024 My first web</p>
+        <p>版权所有 &copy; <span data-current-year>2026</span> My first web</p>
     </footer>
 </body>
 </html>

@@ -111,10 +111,10 @@ python -m http.server 8080
 - [x] 在所有页面引入同一个 `style.css`。
 - [x] 定义颜色、间距、字体和最大内容宽度的 CSS 变量。
 - [x] 使用 Flexbox 或 Grid 完成导航与卡片布局。
-- [ ] 设置图片 `max-width: 100%; height: auto;`。
-- [ ] 至少设置一个移动端断点，推荐 `768px`。
-- [ ] 为链接、按钮和输入框添加清晰的 `:focus-visible` 状态。
-- [ ] 保证正文与背景有足够对比度。
+- [x] 设置图片 `max-width: 100%; height: auto;`。
+- [x] 至少设置一个移动端断点，推荐 `768px`。
+- [x] 为链接、按钮和输入框添加清晰的 `:focus-visible` 状态。
+- [x] 保证正文与背景有足够对比度。
 
 验收标准：在 360px、768px、1440px 三种视口下无横向滚动；文字不重叠；键盘焦点清晰可见。
 
@@ -122,14 +122,16 @@ python -m http.server 8080
 
 任务：
 
-- [ ] 用 `defer` 引入 `main.js`。
-- [ ] 实现移动端导航开关，并同步 `aria-expanded`。
-- [ ] 自动显示当前年份。
-- [ ] 不用 JavaScript 接管浏览器已有的表单校验。
-- [ ] 检查所有页面的控制台、网络请求和链接。
-- [ ] 用 Lighthouse 检查 Performance、Accessibility、Best Practices、SEO。
+- [x] 用 `defer` 引入 `main.js`。
+- [x] 实现移动端导航开关，并同步 `aria-expanded`。
+- [x] 自动显示当前年份。
+- [x] 不用 JavaScript 接管浏览器已有的表单校验。
+- [x] 检查所有页面的控制台、网络请求和链接。
+- [x] 用 Lighthouse 检查 Performance、Accessibility、Best Practices、SEO。
 
 建议验收阈值：四项移动端分数均达到 90；如果未达到，在 README 记录原因与修复计划。
+
+阶段 3、4 已于 2026-10-26 完成本地验收；具体视口、交互与 Lighthouse 评分见 [验收记录](docs/阶段3-4验收记录.md)。此处验收不包含后续服务器部署。
 
 ### 阶段 5：Git 与 GitHub 交付（60–90 分钟）
 

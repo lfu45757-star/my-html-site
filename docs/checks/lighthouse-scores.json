@@ -1,0 +1,54 @@
+[
+  {
+    "page": "index.html",
+    "lighthouseVersion": "13.5.0",
+    "fetchTime": "2026-10-25T17:35:08.149Z",
+    "formFactor": "mobile",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "warnings": []
+  },
+  {
+    "page": "projects.html",
+    "lighthouseVersion": "13.5.0",
+    "fetchTime": "2026-10-25T17:35:14.589Z",
+    "formFactor": "mobile",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "warnings": []
+  },
+  {
+    "page": "contact.html",
+    "lighthouseVersion": "13.5.0",
+    "fetchTime": "2026-10-25T17:35:21.546Z",
+    "formFactor": "mobile",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "warnings": []
+  },
+  {
+    "page": "404.html",
+    "lighthouseVersion": "13.5.0",
+    "fetchTime": "2026-10-25T17:35:27.903Z",
+    "formFactor": "mobile",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "warnings": []
+  }
+]
