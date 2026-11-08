@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.local-backups/
+test-results/
+playwright-report/
+.preview-*.log
+.env
+.env.*
+!.env.example

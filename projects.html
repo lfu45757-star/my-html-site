@@ -1,92 +1,379 @@
 <!doctype html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的项目 | My first web</title>
-    <meta name="description" content="查看 XiaoWu_5 的三个项目展示：wechatbot、douyin-favorite-MyLike 和 YouDub-webui，包含介绍、截图与源码链接。">
-    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
-    <script src="assets/js/main.js" defer></script>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>项目 | XiaoWu_5</title>
+    <meta
+      name="description"
+      content="探索 XiaoWu_5 的 wechatbot、douyin-favorite-MyLike 和 YouDub-webui 项目，按类别筛选、搜索技术标签并查看截图与源码。"
+    />
+    <meta name="theme-color" content="#f7f7f2" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="项目 | XiaoWu_5" />
+    <meta
+      property="og:description"
+      content="探索 XiaoWu_5 的 wechatbot、douyin-favorite-MyLike 和 YouDub-webui 项目，按类别筛选、搜索技术标签并查看截图与源码。"
+    />
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+    <script src="assets/js/theme.js"></script>
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <script src="assets/vendor/vue.global.prod.js" defer></script>
+    <script src="assets/js/app.js" defer></script>
+  </head>
+  <body>
     <a class="skip-link" href="#main-content">跳到主要内容</a>
-    <header class="site-header">
-      <div class="header-inner">
-        <a class="site-brand" href="index.html">My first web</a>
-        <nav aria-label="主要导航">
-          <button class="nav-toggle" type="button" data-nav-toggle aria-controls="primary-navigation" aria-expanded="false" hidden>展开导航</button>
-          <ul class="nav-list" id="primary-navigation">
-                <li><a href="index.html">首页</a></li>
-                <li><a href="projects.html" aria-current="page">项目</a></li>
-                <li><a href="contact.html">联系</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <main id="main-content">
-        <h1>我的项目</h1>
-
-        <div class="project-grid">
-            <section class="project-card">
-                <article>
-                    <h2>wechatbot-rust-v0.3.2</h2>
-                    <p>这是一个用Rust编写的微信机器人项目。</p>
-                    <p>它可以帮助你自动回复消息，管理群聊，甚至可以进行一些简单的任务自动化。</p>
-                    <h3>项目特点</h3>
-                    <ul>
-                        <li>使用Rust语言编写，性能优越</li>
-                        <li>支持自动回复和群聊管理</li>
-                        <li>易于扩展和自定义</li>
-                    </ul>
-                    <a href="https://github.com/lfu45757-star/wechatbot" target="_blank"
-                    rel="noopener noreferrer">查看项目详情</a>
-                    <br>
-                    <img src="assets/images/wechatbot_1.png" alt="wechatbot-rust-v0.3.2" width="1474" height="771" loading="lazy" decoding="async">
-                </article>
-            </section>
-
-            <section class="project-card">
-                <article>
-                    <h2>douyin-favorite-MyLike</h2>
-                    <p>这是一个用于获取抖音收藏夹中视频的项目。</p>
-                    <p>它可以帮助你下载和管理你在抖音上的收藏视频，让你更方便地查看和分享你喜欢的内容。</p>
-                    <h3>项目特点</h3>
-                    <ul>
-                        <li>支持批量下载抖音收藏夹视频</li>
-                        <li>提供简单易用的命令行界面</li>
-                        <li>支持多种视频格式和分辨率</li>
-                    </ul>
-                    <a href="https://github.com/lfu45757-star/douyin-favorite-MyLike" target="_blank"
-                    rel="noopener noreferrer">查看项目详情</a>
-                    <br>
-                    <img src="assets/images/MyLike_1.png" alt="douyin-favorite-MyLike" width="2104" height="1234" loading="lazy" decoding="async">
-                </article>
-            </section>
-
-            <section class="project-card">
-                <article>
-                    <h2>YouDub-webui</h2>
-                    <p>这是一个用于YouTube视频下载的Web界面项目。</p>
-                    <p>它提供了一个简单易用的图形用户界面，让你可以轻松地下载和管理你喜欢的YouTube视频。</p>
-                    <h3>项目特点</h3>
-                    <ul>
-                        <li>提供直观的图形用户界面</li>
-                        <li>支持多种视频格式和分辨率</li>
-                        <li>可以批量下载视频</li>
-                    </ul>
-                    <a href="https://github.com/lfu45757-star/YouDub-webui" target="_blank"
-                    rel="noopener noreferrer">查看项目详情</a>
-                    <br>
-                    <img src="assets/images/YouDub_1.png" alt="YouDub-webui" width="2290" height="1435" loading="lazy" decoding="async">
-                </article>
-            </section>
+    <div id="app">
+      <header class="site-header">
+        <div class="container header-inner">
+          <a class="site-brand" href="index.html" aria-label="XiaoWu_5 首页"
+            ><span class="brand-mark" aria-hidden="true">xw.</span
+            ><span
+              ><span class="brand-name">XiaoWu_5<span style="color: var(--green)">.</span></span
+              ><span class="brand-caption">A LITTLE SPACE ON THE WEB</span></span
+            ></a
+          >
+          <div class="header-right">
+            <nav
+              class="site-nav"
+              id="primary-navigation"
+              :class="{ 'is-open': menuOpen }"
+              aria-label="主要导航"
+            >
+              <ul class="nav-list">
+                <li><a href="index.html" @click="closeMenu()">首页</a></li>
+                <li><a href="projects.html" aria-current="page" @click="closeMenu()">项目</a></li>
+                <li><a href="contact.html" @click="closeMenu()">联系</a></li>
+              </ul>
+            </nav>
+            <div class="header-tools">
+              <a
+                class="icon-button header-github"
+                href="https://github.com/lfu45757-star"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="访问 GitHub 主页（新窗口）"
+                ><svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M9 19c-4 1-4-2-6-2m12 5v-4c0-1 .1-1.6-.5-2 3.3-.4 6.5-1.6 6.5-7A5.4 5.4 0 0 0 19.5 5c.1-.4.6-2-0.2-4 0 0-1.2-.4-4 1.5a14 14 0 0 0-7 0C5.5.6 4.3 1 4.3 1c-.8 2-.3 3.6-.2 4A5.4 5.4 0 0 0 2.6 9c0 5.4 3.2 6.6 6.5 7-.5.5-.7 1.1-.7 2v4"
+                    transform="translate(1 1) scale(.9)"
+                  /></svg
+              ></a>
+              <button
+                class="icon-button"
+                type="button"
+                data-enhanced
+                @click="toggleTheme"
+                :aria-label="isDark ? '切换浅色主题' : '切换深色主题'"
+                :title="isDark ? '切换浅色主题' : '切换深色主题'"
+              >
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M20.5 13a8.5 8.5 0 0 1-9.5-9.5A8.5 8.5 0 1 0 20.5 13Z" />
+                </svg>
+              </button>
+              <button
+                class="icon-button nav-toggle"
+                type="button"
+                data-enhanced
+                @click="menuOpen = !menuOpen"
+                :aria-expanded="String(menuOpen)"
+                aria-controls="primary-navigation"
+                :aria-label="menuOpen ? '收起导航' : '展开导航'"
+              >
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 7h14M5 12h14M5 17h14" />
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
-    </main>
-
-    <footer>
-        <p>版权所有 &copy; <span data-current-year>2026</span> My first web</p>
-    </footer>
-</body>
+      </header>
+      <main class="container projects-page" id="main-content" tabindex="-1">
+        <div class="page-heading">
+          <p class="eyebrow">THE THINGS I'M BUILDING</p>
+          <h1>把想法，做成看得见的东西。</h1>
+          <p>
+            一些解决小问题的工具，一些学习过程里的尝试。<br />不一定完美，但每一个都值得认真记录。
+          </p>
+        </div>
+        <div class="project-toolbar" data-enhanced>
+          <div class="filter-group" role="group" aria-label="按项目类型筛选">
+            <button
+              class="filter-button"
+              type="button"
+              @click="category = 'all'"
+              :aria-pressed="String(category === 'all')"
+            >
+              全部项目</button
+            ><button
+              class="filter-button"
+              type="button"
+              @click="category = 'automation'"
+              :aria-pressed="String(category === 'automation')"
+            >
+              自动化</button
+            ><button
+              class="filter-button"
+              type="button"
+              @click="category = 'tools'"
+              :aria-pressed="String(category === 'tools')"
+            >
+              效率工具</button
+            ><button
+              class="filter-button"
+              type="button"
+              @click="category = 'web'"
+              :aria-pressed="String(category === 'web')"
+            >
+              Web 应用
+            </button>
+          </div>
+          <div class="search-wrap">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="10.5" cy="10.5" r="6.5" />
+              <path d="m16 16 4 4" /></svg
+            ><label class="sr-only" for="project-search">搜索项目名称、简介或技术标签</label
+            ><input
+              id="project-search"
+              type="search"
+              v-model="query"
+              placeholder="搜索名称、技术或关键词…"
+              autocomplete="off"
+              maxlength="100"
+            />
+          </div>
+        </div>
+        <p class="results-count mono" data-enhanced aria-live="polite">
+          显示 {{ filteredProjects.length }} / 3 个项目
+        </p>
+        <h2 class="sr-only">项目列表</h2>
+        <div class="project-grid">
+          <article
+            class="project-card"
+            data-project="wechatbot"
+            data-category="automation"
+            data-features="使用 Rust 编写|支持自动回复与群聊管理|可扩展的任务自动化"
+            v-show="isProjectVisible('wechatbot')"
+          >
+            <div class="project-visual">
+              <span class="project-number">PROJECT / 001</span
+              ><picture
+                ><source srcset="assets/images/wechatbot_1-960.webp" type="image/webp" />
+                <img
+                  src="assets/images/wechatbot_1.png"
+                  alt="wechatbot-rust-v0.3.2 的实际操作界面截图"
+                  width="1474"
+                  height="771"
+                  loading="lazy"
+                  decoding="async"
+              /></picture>
+            </div>
+            <div class="project-body">
+              <span class="project-kind mono">01 / AUTOMATION</span>
+              <h3>wechatbot-rust-v0.3.2</h3>
+              <p class="project-description">
+                用 Rust 探索消息自动化，让重复的聊天任务变得简单一点。
+              </p>
+              <div class="tags" aria-label="项目标签">
+                <span class="tag">Rust</span><span class="tag">微信机器人</span
+                ><span class="tag">自动化</span>
+              </div>
+              <div class="project-links">
+                <a
+                  class="source-link"
+                  href="https://github.com/lfu45757-star/wechatbot"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >查看源码 <span aria-hidden="true">↗</span
+                  ><span class="sr-only">（新窗口）</span></a
+                ><button type="button" data-enhanced @click="openProject('wechatbot', $event)">
+                  项目详情 <span aria-hidden="true">＋</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article
+            class="project-card"
+            data-project="mylike"
+            data-category="tools"
+            data-features="批量管理抖音收藏视频|简单的命令行操作|支持多种格式与分辨率"
+            v-show="isProjectVisible('mylike')"
+          >
+            <div class="project-visual peach">
+              <span class="project-number">PROJECT / 002</span
+              ><picture
+                ><source srcset="assets/images/MyLike_1-960.webp" type="image/webp" />
+                <img
+                  src="assets/images/MyLike_1.png"
+                  alt="douyin-favorite-MyLike 的实际操作界面截图"
+                  width="2104"
+                  height="1234"
+                  loading="lazy"
+                  decoding="async"
+              /></picture>
+            </div>
+            <div class="project-body">
+              <span class="project-kind mono">02 / PERSONAL TOOL</span>
+              <h3>douyin-favorite-MyLike</h3>
+              <p class="project-description">
+                整理收藏夹里的喜欢，让视频收藏不再只是「下次再看」。
+              </p>
+              <div class="tags" aria-label="项目标签">
+                <span class="tag">视频管理</span><span class="tag">命令行</span
+                ><span class="tag">效率工具</span>
+              </div>
+              <div class="project-links">
+                <a
+                  class="source-link"
+                  href="https://github.com/lfu45757-star/douyin-favorite-MyLike"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >查看源码 <span aria-hidden="true">↗</span
+                  ><span class="sr-only">（新窗口）</span></a
+                ><button type="button" data-enhanced @click="openProject('mylike', $event)">
+                  项目详情 <span aria-hidden="true">＋</span>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article
+            class="project-card"
+            data-project="youdub"
+            data-category="web"
+            data-features="图形化 Web 操作界面|支持多种格式与分辨率|批量下载与视频管理"
+            v-show="isProjectVisible('youdub')"
+          >
+            <div class="project-visual lavender">
+              <span class="project-number">PROJECT / 003</span
+              ><picture
+                ><source srcset="assets/images/YouDub_1-960.webp" type="image/webp" />
+                <img
+                  src="assets/images/YouDub_1.png"
+                  alt="YouDub-webui 的实际操作界面截图"
+                  width="2290"
+                  height="1435"
+                  loading="lazy"
+                  decoding="async"
+              /></picture>
+            </div>
+            <div class="project-body">
+              <span class="project-kind mono">03 / WEB APPLICATION</span>
+              <h3>YouDub-webui</h3>
+              <p class="project-description">用直观的 Web 界面，探索视频下载与管理的更轻松方式。</p>
+              <div class="tags" aria-label="项目标签">
+                <span class="tag">Web UI</span><span class="tag">视频工具</span
+                ><span class="tag">批量任务</span>
+              </div>
+              <div class="project-links">
+                <a
+                  class="source-link"
+                  href="https://github.com/lfu45757-star/YouDub-webui"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >查看源码 <span aria-hidden="true">↗</span
+                  ><span class="sr-only">（新窗口）</span></a
+                ><button type="button" data-enhanced @click="openProject('youdub', $event)">
+                  项目详情 <span aria-hidden="true">＋</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="empty-state" v-cloak v-show="filteredProjects.length === 0">
+          <h2>暂时没有找到这个项目。</h2>
+          <p>换一个关键词，或者看看全部的小尝试。</p>
+          <button class="button secondary" type="button" @click="resetFilters">重置筛选</button>
+        </div>
+        <noscript
+          ><p class="noscript-note">
+            项目搜索与详情弹窗需要 JavaScript；你仍可以直接查看全部项目并访问源码。
+          </p></noscript
+        >
+        <aside class="contact-banner" aria-label="交流邀请">
+          <div>
+            <p class="section-index">LET’S CONNECT</p>
+            <h2>好想法，从一次交流开始。</h2>
+            <p>聊聊技术、分享灵感，或只是打个招呼。都很欢迎。</p>
+          </div>
+          <a class="button" href="contact.html"
+            >与我聊聊
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+          ></a>
+        </aside>
+      </main>
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <p>
+            © <span data-current-year>2026</span> XiaoWu_5 <span aria-hidden="true">·</span> My
+            first web, still growing.
+          </p>
+          <div class="footer-right">
+            <span>用 HTML / CSS / JS / Vue 3 慢慢构建</span
+            ><a
+              href="https://github.com/lfu45757-star/my-html-site"
+              target="_blank"
+              rel="noopener noreferrer"
+              >网站源码 ↗<span class="sr-only">（新窗口）</span></a
+            >
+          </div>
+        </div>
+      </footer>
+      <dialog
+        class="project-dialog"
+        ref="projectDialog"
+        aria-labelledby="dialog-title"
+        @close="onDialogClose"
+        @click="onDialogBackdrop"
+      >
+        <template v-if="selectedProject"
+          ><div class="dialog-body dialog-heading">
+            <div>
+              <p class="section-index">PROJECT DETAILS</p>
+              <h2 id="dialog-title">{{ selectedProject.name }}</h2>
+            </div>
+            <button
+              type="button"
+              class="icon-button"
+              @click="closeProject"
+              aria-label="关闭项目详情"
+              autofocus
+            >
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m6 6 12 12M6 18 18 6" />
+              </svg>
+            </button>
+          </div>
+          <img
+            class="dialog-image"
+            :src="selectedProject.image"
+            :alt="selectedProject.name + ' 项目截图'"
+          />
+          <div class="dialog-body">
+            <p>{{ selectedProject.description }}</p>
+            <h3>项目特点</h3>
+            <ul>
+              <li v-for="feature in selectedProject.features" :key="feature">{{ feature }}</li>
+            </ul>
+            <a class="button" :href="selectedProject.url" target="_blank" rel="noopener noreferrer"
+              >在 GitHub 查看源码 ↗<span class="sr-only">（新窗口）</span></a
+            >
+          </div></template
+        >
+      </dialog>
+      <div class="toast" v-cloak v-show="toast" role="status" aria-live="polite">{{ toast }}</div>
+      <button
+        class="icon-button back-top"
+        data-enhanced
+        v-show="showBackTop"
+        type="button"
+        @click="backToTop"
+        aria-label="返回顶部"
+      >
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 19V5m-6 6 6-6 6 6" />
+        </svg>
+      </button>
+    </div>
+  </body>
 </html>

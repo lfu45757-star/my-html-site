@@ -1,0 +1,7 @@
+assets/vendor/
+node_modules/
+dist/
+.local-backups/
+test-results/
+docs/checks/
+package-lock.json

@@ -1,0 +1,8 @@
+{
+  "package": "vue",
+  "version": "3.5.45",
+  "file": "vue.global.prod.js",
+  "sha256": "0287592e25a077b6190b721db9903d253d936778dab50cbde0d6010c1f51d262",
+  "source": "https://registry.npmjs.org/vue",
+  "license": "MIT"
+}

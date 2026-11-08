@@ -1,38 +1,186 @@
 <!doctype html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>页面未找到 | My first web</title>
-    <meta name="description" content="未找到你访问的页面，请通过导航或首页链接继续浏览 XiaoWu_5 的个人学习网站。">
-    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
-    <script src="assets/js/main.js" defer></script>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>页面未找到 | XiaoWu_5</title>
+    <meta
+      name="description"
+      content="这一页还没有被写出来。返回 XiaoWu_5 的首页或项目页，继续探索。"
+    />
+    <meta name="theme-color" content="#f7f7f2" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="页面未找到 | XiaoWu_5" />
+    <meta
+      property="og:description"
+      content="这一页还没有被写出来。返回 XiaoWu_5 的首页或项目页，继续探索。"
+    />
+    <meta name="robots" content="noindex" />
+    <script>
+      if (location.protocol !== 'file:') {
+        const base = document.createElement('base');
+        base.href = location.hostname.endsWith('.github.io') ? '/my-html-site/' : '/';
+        document.head.append(base);
+      }
+    </script>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+    <script src="assets/js/theme.js"></script>
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <script src="assets/vendor/vue.global.prod.js" defer></script>
+    <script src="assets/js/app.js" defer></script>
+  </head>
+  <body>
     <a class="skip-link" href="#main-content">跳到主要内容</a>
-    <header class="site-header">
-      <div class="header-inner">
-        <a class="site-brand" href="index.html">My first web</a>
-        <nav aria-label="主要导航">
-          <button class="nav-toggle" type="button" data-nav-toggle aria-controls="primary-navigation" aria-expanded="false" hidden>展开导航</button>
-          <ul class="nav-list" id="primary-navigation">
-                <li><a href="index.html">首页</a></li>
-                <li><a href="projects.html">项目</a></li>
-                <li><a href="contact.html">联系</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <main id="main-content">
-        <h1>404 页面未找到</h1>
-        <p>抱歉，您访问的页面不存在。</p>
-        <p>请检查您输入的URL，或者返回<a href="index.html">首页</a>。</p>
-    </main>
-
-    <footer>
-        <p>版权所有 &copy; <span data-current-year>2026</span> My first web</p>
-    </footer>
-</body>
+    <div id="app">
+      <header class="site-header">
+        <div class="container header-inner">
+          <a class="site-brand" href="index.html" aria-label="XiaoWu_5 首页"
+            ><span class="brand-mark" aria-hidden="true">xw.</span
+            ><span
+              ><span class="brand-name">XiaoWu_5<span style="color: var(--green)">.</span></span
+              ><span class="brand-caption">A LITTLE SPACE ON THE WEB</span></span
+            ></a
+          >
+          <div class="header-right">
+            <nav
+              class="site-nav"
+              id="primary-navigation"
+              :class="{ 'is-open': menuOpen }"
+              aria-label="主要导航"
+            >
+              <ul class="nav-list">
+                <li><a href="index.html" @click="closeMenu()">首页</a></li>
+                <li><a href="projects.html" @click="closeMenu()">项目</a></li>
+                <li><a href="contact.html" @click="closeMenu()">联系</a></li>
+              </ul>
+            </nav>
+            <div class="header-tools">
+              <a
+                class="icon-button header-github"
+                href="https://github.com/lfu45757-star"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="访问 GitHub 主页（新窗口）"
+                ><svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M9 19c-4 1-4-2-6-2m12 5v-4c0-1 .1-1.6-.5-2 3.3-.4 6.5-1.6 6.5-7A5.4 5.4 0 0 0 19.5 5c.1-.4.6-2-0.2-4 0 0-1.2-.4-4 1.5a14 14 0 0 0-7 0C5.5.6 4.3 1 4.3 1c-.8 2-.3 3.6-.2 4A5.4 5.4 0 0 0 2.6 9c0 5.4 3.2 6.6 6.5 7-.5.5-.7 1.1-.7 2v4"
+                    transform="translate(1 1) scale(.9)"
+                  /></svg
+              ></a>
+              <button
+                class="icon-button"
+                type="button"
+                data-enhanced
+                @click="toggleTheme"
+                :aria-label="isDark ? '切换浅色主题' : '切换深色主题'"
+                :title="isDark ? '切换浅色主题' : '切换深色主题'"
+              >
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M20.5 13a8.5 8.5 0 0 1-9.5-9.5A8.5 8.5 0 1 0 20.5 13Z" />
+                </svg>
+              </button>
+              <button
+                class="icon-button nav-toggle"
+                type="button"
+                data-enhanced
+                @click="menuOpen = !menuOpen"
+                :aria-expanded="String(menuOpen)"
+                aria-controls="primary-navigation"
+                :aria-label="menuOpen ? '收起导航' : '展开导航'"
+              >
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 7h14M5 12h14M5 17h14" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="container not-found" id="main-content" tabindex="-1">
+        <p class="not-found-number" aria-hidden="true">404</p>
+        <p class="eyebrow">A SMALL DETOUR</p>
+        <h1>这一页，还没有被写出来。</h1>
+        <p>可能是地址写错了，也可能这个想法还在路上。<br />没关系，我们换一条路继续探索。</p>
+        <div class="actions">
+          <a class="button" href="index.html"
+            >回到首页
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14m-6-6 6 6-6 6" /></svg></a
+          ><a class="button secondary" href="projects.html">看看项目</a>
+        </div>
+      </main>
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <p>
+            © <span data-current-year>2026</span> XiaoWu_5 <span aria-hidden="true">·</span> My
+            first web, still growing.
+          </p>
+          <div class="footer-right">
+            <span>用 HTML / CSS / JS / Vue 3 慢慢构建</span
+            ><a
+              href="https://github.com/lfu45757-star/my-html-site"
+              target="_blank"
+              rel="noopener noreferrer"
+              >网站源码 ↗<span class="sr-only">（新窗口）</span></a
+            >
+          </div>
+        </div>
+      </footer>
+      <dialog
+        class="project-dialog"
+        ref="projectDialog"
+        aria-labelledby="dialog-title"
+        @close="onDialogClose"
+        @click="onDialogBackdrop"
+      >
+        <template v-if="selectedProject"
+          ><div class="dialog-body dialog-heading">
+            <div>
+              <p class="section-index">PROJECT DETAILS</p>
+              <h2 id="dialog-title">{{ selectedProject.name }}</h2>
+            </div>
+            <button
+              type="button"
+              class="icon-button"
+              @click="closeProject"
+              aria-label="关闭项目详情"
+              autofocus
+            >
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m6 6 12 12M6 18 18 6" />
+              </svg>
+            </button>
+          </div>
+          <img
+            class="dialog-image"
+            :src="selectedProject.image"
+            :alt="selectedProject.name + ' 项目截图'"
+          />
+          <div class="dialog-body">
+            <p>{{ selectedProject.description }}</p>
+            <h3>项目特点</h3>
+            <ul>
+              <li v-for="feature in selectedProject.features" :key="feature">{{ feature }}</li>
+            </ul>
+            <a class="button" :href="selectedProject.url" target="_blank" rel="noopener noreferrer"
+              >在 GitHub 查看源码 ↗<span class="sr-only">（新窗口）</span></a
+            >
+          </div></template
+        >
+      </dialog>
+      <div class="toast" v-cloak v-show="toast" role="status" aria-live="polite">{{ toast }}</div>
+      <button
+        class="icon-button back-top"
+        data-enhanced
+        v-show="showBackTop"
+        type="button"
+        @click="backToTop"
+        aria-label="返回顶部"
+      >
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 19V5m-6 6 6-6 6 6" />
+        </svg>
+      </button>
+    </div>
+  </body>
 </html>

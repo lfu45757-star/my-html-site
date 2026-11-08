@@ -1,0 +1,26 @@
+{
+  "name": "xiaowu-personal-site",
+  "version": "2.0.0",
+  "private": true,
+  "description": "XiaoWu_5 的个人网站 · HTML、CSS、JavaScript 与 Vue 3",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs",
+    "vendor": "node scripts/vendor.mjs",
+    "build": "npm run check && node scripts/build.mjs",
+    "check": "node --check assets/js/app.js && node --check assets/js/theme.js && node --test tests/site.test.mjs",
+    "test": "npm run check",
+    "test:browser": "playwright test",
+    "format": "prettier --write \"*.html\" \"assets/css/*.css\" \"assets/js/*.js\" \"scripts/*.mjs\" \"tests/**/*.mjs\" playwright.config.mjs package.json README.md docs/vue3-upgrade.md"
+  },
+  "dependencies": {
+    "vue": "3.5.45"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.0",
+    "prettier": "3.9.10"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

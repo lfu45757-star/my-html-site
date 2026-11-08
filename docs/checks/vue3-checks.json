@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-09",
+  "timezone": "Asia/Shanghai",
+  "vue": "3.5.45",
+  "staticChecks": {
+    "command": "npm test",
+    "passed": 10,
+    "failed": 0
+  },
+  "browserChecks": {
+    "command": "npm run test:browser",
+    "passed": 26,
+    "failed": 0,
+    "skipped": 0,
+    "flaky": 0,
+    "viewports": [
+      360,
+      768,
+      1440
+    ],
+    "engine": "Installed Microsoft Edge (Chromium)",
+    "durationMs": 10240
+  },
+  "build": {
+    "command": "npm run build",
+    "result": "passed",
+    "output": "dist/"
+  },
+  "productionDependencyAudit": {
+    "command": "npm audit --omit=dev",
+    "knownVulnerabilities": 0
+  },
+  "limits": [
+    "No new Lighthouse run",
+    "Not tested in Safari/Firefox or on real devices",
+    "Source synchronization is not a verified public deployment"
+  ]
+}
